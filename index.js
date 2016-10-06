@@ -67,7 +67,7 @@ RaspPiGPIOGarageDoorAccessory.prototype = {
   },
 
   isClosed: function() {
-    return fs.readFileSync("/sys/class/gpio/gpio"+this.doorSensorPin+"/value", "utf8").trim() == "1";
+    return fs.readFileSync("/sys/class/gpio/gpio"+this.doorSensorPin+"/value", "utf8").trim() == "0";
   },
 
   switchOff: function() {
